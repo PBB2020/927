@@ -2,6 +2,13 @@ div {
     width:300px;
     margin:start;
     color: lightskyblue;
+    background-color: rgb(20, 67, 67);
+    border-style:ridge;
+    border-color:rgb(2, 43, 43)
+}
+
+body {
+  background-image: url(pexels-joshsorenson-1154510.jpg);
 }
 
 h1, h2 {
@@ -27,7 +34,7 @@ h1, h2 {
   background-color:rgba(192,192,192,0.3);
 }
 #p3 {
-  background-color:rgba(23, 23, 244, 0.3);
+  background-color:rgba(68, 68, 165, 0.3);
 }
 
 table, th, td {
