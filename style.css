@@ -1,3 +1,9 @@
+div {
+    width:300px;
+    margin:start;
+    color: lightskyblue;
+}
+
 h1, h2 {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -5,16 +11,27 @@ h1, h2 {
 
 .link-success {
     text-align: start;
-    color: green
+    color: lightblue;
 }
 
 #background1 {
     background-color: aqua;
+    opacity: 0.3;
 }
+
+#p1 {
+    background-color:rgba(0, 255, 98, 0.3);
+
+}
+#p2 {background-color:rgba(192,192,192,0.3);}
+#p3 {background-color:rgba(23, 23, 244, 0.3);}
 
 table, th, td {
     border: 1px solid black;
+    color: lightskyblue;
+    text-align: center;
   }
+
 table.center {
     margin-left: auto; 
     margin-right: auto;
