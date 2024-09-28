@@ -23,8 +23,12 @@ h1, h2 {
     background-color:rgba(0, 255, 98, 0.3);
 
 }
-#p2 {background-color:rgba(192,192,192,0.3);}
-#p3 {background-color:rgba(23, 23, 244, 0.3);}
+#p2 {
+  background-color:rgba(192,192,192,0.3);
+}
+#p3 {
+  background-color:rgba(23, 23, 244, 0.3);
+}
 
 table, th, td {
     border: 1px solid black;
@@ -35,4 +39,14 @@ table, th, td {
 table.center {
     margin-left: auto; 
     margin-right: auto;
+  }
+
+div.mycontainer {
+    width:100%;
+    overflow:auto;
+  }
+  
+div.mycontainer div {
+    width:33%;  
+    float:left;
   }
