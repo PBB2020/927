@@ -1,59 +1,45 @@
-div {
-    width:300px;
-    margin:start;
-    color: lightskyblue;
-    background-color: rgb(20, 67, 67);
-    border-style:ridge;
-    border-color:rgb(2, 43, 43)
-}
-
 body {
-  background-image: url(pexels-joshsorenson-1154510.jpg);
+  background-image: url(pexels-coleito-3144214.jpg);
 }
 
-h1, h2 {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
-.link-success {
+h1, .link-success {
     text-align: start;
-    color: lightblue;
+    color: rgb(113, 245, 98);
 }
 
-#background1 {
-    background-color: aqua;
-    opacity: 0.3;
-}
-
-#p1 {
-    background-color:rgba(0, 255, 98, 0.3);
-
-}
-#p2 {
-  background-color:rgba(192,192,192,0.3);
-}
-#p3 {
-  background-color:rgba(68, 68, 165, 0.3);
-}
-
-table, th, td {
-    border: 1px solid black;
-    color: lightskyblue;
-    text-align: center;
+  .mycontainer div {
+    width: 25%;
+    padding: 50px 50px 50px 50px;
+    float:inline-start;
+    color: rgb(84, 24, 5);
+    background-color: rgb(89, 139, 18);
+    border-style: ridge;
+    border-color:rgb(5, 24, 1)
   }
-
-table.center {
-    margin-left: auto; 
-    margin-right: auto;
-  }
-
-div.mycontainer {
-    width:100%;
-    overflow:auto;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
   }
   
-div.mycontainer div {
-    width:33%;  
-    float:left;
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(185, 114, 6);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #0b5106;
   }
