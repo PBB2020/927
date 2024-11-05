@@ -5,29 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Mai Óra</title> 
-    <ul>
-        <li><a href="#news">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About Me</a></li>
-    </ul>
-    <div class="quotes">
-        <div class="quote">Carl Jung: "Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning
-             if it were not balanced by sadness. It is far better take things as they come along with patience and equanimity."</div>
-        <div class="quote">Marcus Aurelius: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking"</div>
-        <div class="quote">Gretchen Rubin: "Negative emotions like loneliness, envy, and guilt have an important role to play in a happy life;
-             they're big, flashing signs that something needs to change."</div>
-    </div>
-    <div>
-        <h1>About Me</h1>
-        <p style="color: rgb(237, 208, 66); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; ">
-            Hello! I am a Software Developer and Tester student, there are my projects. </p>
-    </div>
 </head>
 <body>
+<ul>
+    <li><a href="#projects" id="projects-link">Projects</a></li>
+    <li><a href="#contact" id="contact-link">Contact</a></li>
+    <li style="float:right"><a href="#about" id="about-link" class="active">About Me</a></li>
+</ul>
+<div class="quotes">
+    <div class="quote">Carl Jung: "Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning
+             if it were not balanced by sadness. It is far better take things as they come along with patience and equanimity."</div>
+    <div class="quote">Marcus Aurelius: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking"</div>
+    <div class="quote">Gretchen Rubin: "Negative emotions like loneliness, envy, and guilt have an important role to play in a happy life;
+             they're big, flashing signs that something needs to change."</div>
+</div>
+<div>
+    <h1>Welcome to my Site</h1>
+</div>
+<div id="aboutModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>About Me</h2>
+        <p>Hello! I am a Software Developer and Tester student. I am passionate about coding and exploring new technologies.</p>
+    </div>
+</div>
+<div id="projectsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Projects</h2>
+        <p>Here are some of my projects:</p>
+        <ul>
+            <li><a href="https://pbb2020.github.io/927/">First Project 09.27.</a></li>
+            <li><a href="https://pbb2020.github.io/Project_2/">Second Project</a></li>
+        </ul>
+    </div>
+</div>
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Information</h2>
+        <p>https://pbb2020.github.io </p>
+    </div>
+</div>
+
+<script>
     
-    <h1 style="color: rgb(237, 208, 66); font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Projects</h1>
-    <a href="https://pbb2020.github.io/927/" class="link-success" >First Project 09.27.</a>
-    <br>
-    <a href="https://pbb2020.github.io/Project_2/" class="link-success" >Second Project</a>
+    const links = document.querySelectorAll('ul li a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+    document.querySelector('#projects-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('projectsModal');
+    });
+
+    document.querySelector('#about-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('aboutModal');
+    });
+
+    document.querySelector('#contact-link').addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal('contactModal');
+    });
+
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            modal.style.display = 'none';
+        });
+    });
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+        }
+    };
+</script>
+
 </body>
 </html>
